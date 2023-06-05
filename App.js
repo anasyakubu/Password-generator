@@ -23,9 +23,8 @@ send.addEventListener("click", (e) => {
   var passwordLength = 12; // Specify the desired length of the password
   var generatedPassword = generatePassword(passwordLength);
   console.log(generatedPassword);
-
   // console.log('clicked')
-  alert(email.value);
+  // alert(email.value);
 
   Email.send({
     SecureToken: "864e6dbb-9d31-47ca-8af1-4371d598e59f",
@@ -36,7 +35,8 @@ send.addEventListener("click", (e) => {
       "<h6>Thank You..</h6>",
   }).then(
     form.reset(),
-    message => alert(message)
+    message => alert(message),
+    alert("Your password has been successfully generated and sent to your email address. Please check your inbox for further instructions on how to access your password")
   );
 })
 
